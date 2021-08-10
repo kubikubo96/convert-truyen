@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CONVERT CHARACTOR</title>
+  <title>CONVERT TRUYỆN</title>
 </head>
 
 <body>
@@ -136,7 +136,7 @@
   function copyTEXT() {
     var textAria = document.getElementById('content');
     textAriaValue = textAria.value;
-    newAriaValue = textAriaValue.replaceAll(window.speW, '')
+    newAriaValue = textAriaValue.replaceAll(window.speW, ' ')
     textAria.value = newAriaValue;
     textAria.select();
     document.execCommand("copy");
