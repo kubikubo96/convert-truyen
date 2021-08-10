@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONVERT CHARACTOR</title>
+</head>
+
+<body>
+
+  <div>
+    <textarea id="content" spellcheck="false" style="
+    font-family:auto;
+    width: 80%;
+     height: 500px;
+     line-height: 2;
+     font-weight: normal;
+     font-size: 20px;
+     overflow-y: scroll;
+     padding: 15px;">
+    </textarea>
+    <input type="text" id="boxConvert" value="" style="display: none;">
+  </div>
+  <div style="text-align: center;">
+    <button id="copyTEXT" onclick="clickedToConvert();" style="
+    width: 100px;
+    margin-top: 30px;
+    height: 100px;
+    color: #000;
+    background: aquamarine;
+    ">CONVERT</button>
+    <button id="copyTEXT" onclick="copyTEXT();" style="
+    width: 100px;
+    margin-top: 30px;
+    margin-right: 30px;
+    height: 100px;
+    color: #000;
+    background: blanchedalmond;
+    ">COPY</button>
+  </div>
+</body>
+
+<script>
+
+  String.prototype.replaceAt = function (index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+  }
+
+  function convertDATA(text) {
+
+    text = text.replaceAll("eBook miễn phí tại: Webtietkiem.com", " ");
+    text = text.replaceAll("Webtietkiem.com", " ");
+    text = text.replaceAll("eBook miễn phí tại", " ");
+    text = text.replaceAll("Nguyễn Văn PhướcSáng lập First News - Trí Việt", " ");
+    text = text.replaceAll("Nguyễn Văn Phước", " ");
+    text = text.replaceAll("Sáng lập First News", " ");
+    text = text.replaceAll("Trí Việt", " ");
+    text = text.replaceAll("Webtietkiem.com", " ");
+
+    text = text.replaceAll("ℓ", "l");
+    text = text.replaceAll("ɓ", "b");
+    text = text.replaceAll("ԉ", "n");
+    text = text.replaceAll("ᾰ", "ă");
+    text = text.replaceAll("tn", "tr");
+    text = text.replaceAll("Tn", "tr");
+    text = text.replaceAll("TN", "tr");
+    text = text.replaceAll("thể", "THỂ");
+    text = text.replaceAll("Thể", "THỂ");
+    text = text.replaceAll("THể", "THỂ");
+    text = text.replaceAll("Để", "ĐỂ");
+    text = text.replaceAll("để", "ĐỂ");
+    if (text.indexOf('.." ".') < 0) {
+      text = text.replaceAll(".", '.." ".');
+    }
+
+
+    text = text.replaceAll("[1]", "");
+    text = text.replaceAll("[2]", "");
+    text = text.replaceAll("[3]", "");
+    text = text.replaceAll("[4]", "");
+    text = text.replaceAll("[5]", "");
+    text = text.replaceAll("[6]", "");
+    text = text.replaceAll("[7]", "");
+    text = text.replaceAll("[8]", "");
+    text = text.replaceAll("[9]", "");
+    text = text.replaceAll("[10]", "");
+    text = text.replaceAll("[11]", "");
+    text = text.replaceAll("[12]", "");
+    text = text.replaceAll("[13]", "");
+    text = text.replaceAll("[14]", "");
+    text = text.replaceAll("[15]", "");
+    text = text.replaceAll("[16]", "");
+    text = text.replaceAll("[17]", "");
+    text = text.replaceAll("(1)", "");
+    text = text.replaceAll("(2)", "");
+    text = text.replaceAll("(3)", "");
+    text = text.replaceAll("(4)", "");
+    text = text.replaceAll("(5)", "");
+    text = text.replaceAll("(6)", "");
+    text = text.replaceAll("(7)", "");
+    text = text.replaceAll("(8)", "");
+    text = text.replaceAll("(9)", "");
+    text = text.replaceAll("(10)", "");
+    text = text.replaceAll("(11)", "");
+    text = text.replaceAll("(12)", "");
+    text = text.replaceAll("(13)", "");
+    text = text.replaceAll("(14)", "");
+    text = text.replaceAll("(15)", "");
+    text = text.replaceAll("(16)", "");
+    text = text.replaceAll("(17)", "");
+    return text;
+
+  }
+
+  window.speW = '.                                                                                                                                                                                                                                                                                                                                                            .';
+  window.first = 1;
+  function clickedToConvert() {
+    var textAria = document.getElementById('content');
+    var contentAria = textAria.value;
+    console.log(contentAria);
+    var inputConvert = document.getElementById('boxConvert');
+    inputConvert.value = convertDATA(contentAria);
+    var textForAria = inputConvert.value;
+    textAria.value = textForAria.replaceAll('".', '". ' + window.speW);
+    // if(window.first == 1) {
+    //   textAria.value = textForAria.replaceAll('".', '". ' + window.speW);
+    // } else {
+    //   textAria.value = textForAria;
+    // }
+    // window.first = 0;
+  }
+
+
+  function copyTEXT() {
+    var textAria = document.getElementById('content');
+    textAriaValue = textAria.value;
+    newAriaValue = textAriaValue.replaceAll(window.speW, '')
+    textAria.value = newAriaValue;
+    textAria.select();
+    document.execCommand("copy");
+  }
+</script>
+
+</html>
