@@ -56,8 +56,8 @@
     text = text.replaceAll('...', '.');
     text = text.replaceAll('. . .', '.');
     text = text.replaceAll('..', '.');
-    text = text.replaceAll(':', '.');
     text = text.replaceAll('-', '.');
+    text = text.replaceAll('..', '.');
 
     text = text.replaceAll('v.v', '');
     text = text.replaceAll('vv', '');
@@ -80,8 +80,7 @@
     if (text.indexOf('.." ".') < 0) {
       text = text.replaceAll(".", '.." ".');
     }
-
-
+    text = text.replaceAll(':', '.');
     text = text.replaceAll("[1]", "");
     text = text.replaceAll("[2]", "");
     text = text.replaceAll("[3]", "");
@@ -116,6 +115,8 @@
     text = text.replaceAll("(15)", "");
     text = text.replaceAll("(16)", "");
     text = text.replaceAll("(17)", "");
+
+    text = text.replaceAll('.." ".  .." ".', '.." ".');
 
     return text;
 
