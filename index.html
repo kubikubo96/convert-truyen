@@ -58,6 +58,8 @@
     text = text.replaceAll('..', '.');
     text = text.replaceAll('-', '.');
     text = text.replaceAll('..', '.');
+    text = text.replaceAll('__', '');
+    text = text.replaceAll('____________________', '');
 
     text = text.replaceAll('v.v', '');
     text = text.replaceAll('vv', '');
@@ -65,18 +67,38 @@
     text = text.replaceAll('v..v', '');
     text = text.replaceAll('v..v', '');
 
-    text = text.replaceAll("ℓ", "l");
-    text = text.replaceAll("ɓ", "b");
-    text = text.replaceAll("ԉ", "n");
-    text = text.replaceAll("ᾰ", "ă");
-    text = text.replaceAll("tn", "tr");
-    text = text.replaceAll("Tn", "tr");
-    text = text.replaceAll("TN", "tr");
+    text = text.replaceAll("kϊƈɦ", "kích");
+    text = text.replaceAll("hϊế͙p͙", "hiếp");
+    text = text.replaceAll("ɖu͙ƈ", "dục");
     text = text.replaceAll("thể", "THỂ");
     text = text.replaceAll("Thể", "THỂ");
     text = text.replaceAll("THể", "THỂ");
     text = text.replaceAll("Để", "ĐỂ");
     text = text.replaceAll("để", "ĐỂ");
+    text = text.replaceAll("đuợc", "được");
+    text = text.replaceAll("truớc", "trước");
+    text = text.replaceAll("ℓ", "l");
+    text = text.replaceAll("ɖ", "d");
+    text = text.replaceAll("p͙", "p");
+    text = text.replaceAll("ʍ", "m");
+    text = text.replaceAll("ȶ", "t");
+    text = text.replaceAll("ɦ", "h");
+    text = text.replaceAll("ʍ", "m");
+    text = text.replaceAll("t̼", "t");
+    text = text.replaceAll("ɭ", "l");
+    text = text.replaceAll("ɠ", "g");
+    text = text.replaceAll("u͙", "ụ");
+    text = text.replaceAll("ƈ", "c");
+    text = text.replaceAll("ɓ", "b");
+    text = text.replaceAll("ԉ", "n");
+    text = text.replaceAll("и", "n");
+    text = text.replaceAll("и", "n");
+    text = text.replaceAll("ᾰ", "ă");
+    text = text.replaceAll("ϊ", "i");
+    text = text.replaceAll("ɧ", "h");
+    text = text.replaceAll("tn", "tr");
+    text = text.replaceAll("Tn", "tr");
+    text = text.replaceAll("TN", "tr");
     if (text.indexOf('.." ".') < 0) {
       text = text.replaceAll(".", '.." ".');
     }
