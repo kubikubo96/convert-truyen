@@ -51,14 +51,13 @@
 
   function convertDATA(text) {
 
-    text = text.replaceAll("eBook miễn phí tại: Webtietkiem.com", " ");
-    text = text.replaceAll("Webtietkiem.com", " ");
-    text = text.replaceAll("eBook miễn phí tại", " ");
-    text = text.replaceAll("Nguyễn Văn PhướcSáng lập First News - Trí Việt", " ");
-    text = text.replaceAll("Nguyễn Văn Phước", " ");
-    text = text.replaceAll("Sáng lập First News", " ");
-    text = text.replaceAll("Trí Việt", " ");
-    text = text.replaceAll("Webtietkiem.com", " ");
+    text = text.replaceAll('. . . .', '.');
+    text = text.replaceAll('....', '.');
+    text = text.replaceAll('...', '.');
+    text = text.replaceAll('. . .', '.');
+    text = text.replaceAll('..', '.');
+    text = text.replaceAll(':', '.');
+    text = text.replaceAll('-', '.');
 
     text = text.replaceAll('v.v', '');
     text = text.replaceAll('vv', '');
