@@ -51,13 +51,13 @@
 
   function convertDATA(text) {
 
-    text = text.replaceAll('. . . .', '.');
-    text = text.replaceAll('....', '.');
-    text = text.replaceAll('...', '.');
-    text = text.replaceAll('. . .', '.');
-    text = text.replaceAll('..', '.');
-    text = text.replaceAll('-', '.');
-    text = text.replaceAll('..', '.');
+    text = text.replaceAll('. . . .', ',');
+    text = text.replaceAll('....', ',');
+    text = text.replaceAll('...', ',');
+    text = text.replaceAll('. . .', ',');
+    text = text.replaceAll('..', ',');
+    text = text.replaceAll('-', ',');
+    text = text.replaceAll('..', ',');
     text = text.replaceAll('__', '');
     text = text.replaceAll('____________________', '');
 
@@ -68,15 +68,57 @@
     text = text.replaceAll('v..v', '');
 
     text = text.replaceAll("kϊƈɦ", "kích");
+    text = text.replaceAll("Tác", "TÁC");
+    text = text.replaceAll("tác", "TÁC");
     text = text.replaceAll("hϊế͙p͙", "hiếp");
     text = text.replaceAll("ɖu͙ƈ", "dục");
     text = text.replaceAll("thể", "THỂ");
     text = text.replaceAll("Thể", "THỂ");
     text = text.replaceAll("THể", "THỂ");
     text = text.replaceAll("Để", "ĐỂ");
+    text = text.replaceAll("haha", "ha ha");
     text = text.replaceAll("để", "ĐỂ");
     text = text.replaceAll("đuợc", "được");
     text = text.replaceAll("truớc", "trước");
+    text = text.replaceAll("(Còn tiếp)", "");
+    text = text.replaceAll("Còn tiếp", "");
+    text = text.replaceAll("còn tiếp", "");
+    text = text.replaceAll("(còn tiếp)", "");
+    text = text.replaceAll("Clgt", "cái gì vậy");
+    text = text.replaceAll("clgt", "cái gì vậy");
+    text = text.replaceAll("ooooo", "o");
+    text = text.replaceAll("oooo", "o");
+    text = text.replaceAll("ooo", "o");
+    text = text.replaceAll("hhhhh", "");
+    text = text.replaceAll("hhhh", "");
+    text = text.replaceAll("hhh", "");
+    text = text.replaceAll("hh", "");
+    text = text.replaceAll("WTF", "cái gì vậy");
+    text = text.replaceAll("wtf", "cái gì vậy");
+    text = text.replaceAll("zậy", "vậy");
+    text = text.replaceAll("Zậy", "vậy");
+    text = text.replaceAll("t༎ຶ‿༎ຶ", "tôi");
+    text = text.replaceAll("Tg", "");
+    text = text.replaceAll("HSn", "Hưm");
+    text = text.replaceAll("jX", " ");
+    text = text.replaceAll("~~~~~~~~", "");
+    text = text.replaceAll("zzz", "");
+    text = text.replaceAll("zooo", "dô");
+    text = text.replaceAll("yo.", "dô.");
+    text = text.replaceAll("zz", "");
+    text = text.replaceAll("<3", "");
+    text = text.replaceAll("kính dâm", "kính râm");
+    text = text.replaceAll("OMG", "ô mai gút.");
+    text = text.replaceAll("Omg", "ô mai gút.");
+    text = text.replaceAll("omg", "ô mai gút.");
+    text = text.replaceAll("hhhh", "");
+    text = text.replaceAll("Chúc các bạn đọc truyện vui vẻ.", "");
+    text = text.replaceAll("Kiều Lê: Like, vote, nhấn theo dõi và bình luận đưa ra ý kiến nhiệt tình nào các tình yêu ơi.", "");
+    text = text.replaceAll("Kiều Lê: like và vote cùng nhấn theo dõi nhiệt tình nào các bạn ơi!!!!!!!!", "");
+    text = text.replaceAll("(Điều quan trọng phải nhắc lại...hhhh)", "");
+    text = text.replaceAll("(Kiều Lê: Đừng đọc lướt qua mọi người ơi!!!", "");
+    text = text.replaceAll("(Like, vote, theo dõi để lại bình luận để ủng hộ mình nhé.", "");
+    text = text.replaceAll("Kiều Lê: Mọi người ơi... mọi người ơi... em vất vả cực khổ lắm mọi người đọc đừng vội lướt qua... hãy like, vote và nhấn theo dõi để ủng hộ cho em ít động lục cố gắng tiếp nào... mọi người ơi...", "");
     text = text.replaceAll("ℓ", "l");
     text = text.replaceAll("ɖ", "d");
     text = text.replaceAll("p͙", "p");
@@ -102,7 +144,7 @@
     if (text.indexOf('.." ".') < 0) {
       text = text.replaceAll(".", '.." ".');
     }
-    text = text.replaceAll(':', '.');
+    text = text.replaceAll(':', ',');
     text = text.replaceAll("[1]", "");
     text = text.replaceAll("[2]", "");
     text = text.replaceAll("[3]", "");
